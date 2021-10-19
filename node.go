@@ -32,7 +32,8 @@ type redisConn struct {
 }
 
 type redisNode struct {
-	address string
+	address  string
+	password string
 
 	conns     list.List
 	keepAlive int
