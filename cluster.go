@@ -73,6 +73,7 @@ func NewCluster(options *Options) (*Cluster, error) {
 
 	err := cluster.update(node)
 	if err != nil {
+	    fmt.Printf("cluster node %s update error: %s", node.address, err.Error())
 	    continue
 	} else {
 	    go cluster.handleUpdate()
